@@ -1,6 +1,6 @@
 {
   "name": "@himanshubhardwaj87/jenkins-mcp-server",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "main": "dist/index.js",
   "bin": {
@@ -15,7 +15,14 @@
     "dev": "tsc --watch",
     "prepublishOnly": "npm run build"
   },
-  "keywords": ["mcp", "jenkins", "ci", "cd", "claude", "ai"],
+  "keywords": [
+    "mcp",
+    "jenkins",
+    "ci",
+    "cd",
+    "claude",
+    "ai"
+  ],
   "author": "",
   "license": "ISC",
   "description": "MCP server for Jenkins CI/CD integration with Claude",
