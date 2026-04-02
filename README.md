@@ -57,7 +57,7 @@ Transport: Claude spawns the MCP server as a subprocess and communicates
 
 ## Is This Generic? Can Others Use It?
 
-**Yes — completely.** The server has zero Provar-specific code. It works with **any Jenkins instance** (Jenkins LTS, Jenkins Cloud, self-hosted, Docker) as long as:
+**Yes — completely.** It works with **any Jenkins instance** (Jenkins LTS, Jenkins Cloud, self-hosted, Docker) as long as:
 
 - Jenkins has its REST API enabled (it is by default)
 - You have a user account with an API token
