@@ -1,5 +1,5 @@
 {
-  "name": "@provartesting/jenkins-mcp-server",
+  "name": "@himanshubhardwaj87/jenkins-mcp-server",
   "version": "1.0.0",
   "type": "module",
   "main": "dist/index.js",
@@ -24,10 +24,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/provartesting/jenkins-mcp-server.git"
+    "url": "https://github.com/himanshubhardwaj87/jenkins-mcp-server.git"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
+    "access": "public"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.27.1",

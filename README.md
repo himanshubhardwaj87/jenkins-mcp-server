@@ -115,26 +115,19 @@ The only configuration is three environment variables:
 
 ### Step 2: Install the MCP Server
 
-**Option A — Install from GitHub Packages (recommended)**
+**Option A — Install from npm (recommended)**
 
-Add to your `~/.npmrc`:
-```
-//npm.pkg.github.com/:_authToken=YOUR_GITHUB_PAT
-@provartesting:registry=https://npm.pkg.github.com
-```
-
-You need a GitHub Personal Access Token with `read:packages` scope.
-Create one at: https://github.com/settings/tokens
-
-Then install globally:
 ```bash
-npm install -g @provartesting/jenkins-mcp-server
+npm install -g @himanshubhardwaj87/jenkins-mcp-server
 ```
+
+No authentication needed — the package is public on the npm registry.
+Package page: https://www.npmjs.com/package/@himanshubhardwaj87/jenkins-mcp-server
 
 **Option B — Clone and build from source**
 
 ```bash
-git clone https://github.com/provartesting/jenkins-mcp-server.git
+git clone https://github.com/himanshubhardwaj87/jenkins-mcp-server.git
 cd jenkins-mcp-server
 npm install
 npm run build
@@ -151,7 +144,7 @@ Add to your `~/.claude.json` (create if it doesn't exist):
   "mcpServers": {
     "jenkins": {
       "command": "npx",
-      "args": ["-y", "@provartesting/jenkins-mcp-server"],
+      "args": ["-y", "@himanshubhardwaj87/jenkins-mcp-server"],
       "env": {
         "JENKINS_URL": "https://your-jenkins-instance.example.com",
         "JENKINS_USERNAME": "your-username",
@@ -162,21 +155,9 @@ Add to your `~/.claude.json` (create if it doesn't exist):
 }
 ```
 
-If you built from source, use:
+If you built from source, replace the `args` with:
 ```json
-{
-  "mcpServers": {
-    "jenkins": {
-      "command": "node",
-      "args": ["/path/to/jenkins-mcp-server/dist/index.js"],
-      "env": {
-        "JENKINS_URL": "https://your-jenkins-instance.example.com",
-        "JENKINS_USERNAME": "your-username",
-        "JENKINS_API_TOKEN": "your-api-token"
-      }
-    }
-  }
-}
+"args": ["node", "/path/to/jenkins-mcp-server/dist/index.js"]
 ```
 
 **For Claude Desktop**, add the same `mcpServers` block to:
@@ -226,7 +207,7 @@ Get the Jenkinsfile for "my-pipeline-job"
 
 ```bash
 # Clone
-git clone https://github.com/provartesting/jenkins-mcp-server.git
+git clone https://github.com/himanshubhardwaj87/jenkins-mcp-server.git
 cd jenkins-mcp-server
 
 # Install dependencies
